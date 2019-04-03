@@ -1,0 +1,32 @@
+{
+  "name": "tallbag-from-event",
+  "version": "1.0.0",
+  "description": "Create a tallbag listenable source from events on a DOM node",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staltz/tallbag-from-event.git"
+  },
+  "main": "index.cjs.js",
+  "module": "index.js",
+  "types": "types.d.ts",
+  "scripts": {
+    "build": "rollup $npm_package_module -o $npm_package_main --f cjs",
+    "pretest": "npm run build",
+    "test": "tape test.js",
+    "prepare": "npm test"
+  },
+  "author": "staltz.com",
+  "license": "MIT",
+  "keywords": [
+    "callbag",
+    "tallbag"
+  ],
+  "dependencies": {
+    "tallbag": "~1.2.0",
+    "shadow-callbag": "~1.0.0"
+  },
+  "devDependencies": {
+    "rollup": "^0.67.0",
+    "tape": "^4.8.0"
+  }
+}
